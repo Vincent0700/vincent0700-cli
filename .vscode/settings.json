@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
+}
