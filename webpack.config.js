@@ -1,7 +1,8 @@
 const path = require('path');
 const BannerPlugin = require('webpack').BannerPlugin;
-const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const ChmodWebpackPlugin = require('chmod-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const resolve = (dir) => path.join(__dirname, dir);
 
@@ -18,13 +19,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.txt$/,
-        use: {
-          loader: 'raw-loader',
-          options: {
-            esModule: false
+        test: /\.dat$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: { esModule: false }
           }
-        }
+        ]
       }
     ]
   },
@@ -32,5 +33,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new BannerPlugin({ banner: '#!/usr/bin/env node', raw: true }),
     new ChmodWebpackPlugin([{ path: resolve('dist/index.js'), mode: 755 }])
+    // new BundleAnalyzerPlugin()
   ]
 };
