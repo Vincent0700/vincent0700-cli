@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "webpack --progress",
+    "prepublish": "npm run build",
     "lint": "eslint --fix ./src/**/*.js && prettier --write ./**/*.{md,json}"
   },
   "devDependencies": {
