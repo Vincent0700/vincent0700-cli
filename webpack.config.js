@@ -2,7 +2,7 @@ const path = require('path');
 const BannerPlugin = require('webpack').BannerPlugin;
 const ChmodWebpackPlugin = require('chmod-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const resolve = (dir) => path.join(__dirname, dir);
 
