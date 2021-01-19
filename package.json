@@ -1,6 +1,6 @@
 {
   "name": "vincent0700-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "vincent0700 (https://vincentstudio.info)",
   "email": "wang.yuanqiu007@gmail.com",
   "description": "everything about me",
@@ -10,6 +10,10 @@
     "profile",
     "resume"
   ],
+  "main": "./dist/index.js",
+  "bin": {
+    "vincent0700": "./dist/index.js"
+  },
   "scripts": {
     "build": "webpack --progress",
     "lint": "eslint --fix ./src/**/*.js && prettier --write ./**/*.{md,json}"

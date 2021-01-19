@@ -221,15 +221,19 @@ const r2 = chalk.bgHex('#BDC3C7').hex('#000');
   let frameIndex = 0;
 
   const renderFrame = (index) => {
-    console.clear();
-    if (process.stdout.columns > 77) console.log(frames[index]);
-    else console.log('error');
+    process.stdout.cursorTo(0, 0, () => {
+      if (process.stdout.columns > 77) console.log(frames[index]);
+      else console.log('error');
+    });
   };
 
   process.stdout.on('resize', () => {
     frames = getFrames(process.stdout.columns);
+    console.clear();
     renderFrame(frameIndex);
   });
+
+  console.clear();
 
   // render loop
   while (true) {
