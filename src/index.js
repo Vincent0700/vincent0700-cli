@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const { repeat, range, sleep, fetch, render, logError } = require('./utils');
+const { repeat, range, sleep, fetch, render, logError, clearScreen } = require('./utils');
 
 const FRAME_COUNT = 4;
 const FRAME_SPEED = 100;
@@ -119,12 +119,11 @@ const PROFILE_ROWS = [
 
   process.stdout.on('resize', () => {
     frames = getFrames(process.stdout.columns);
-    process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
-    console.clear();
+    clearScreen();
     renderFrame(frameIndex);
   });
 
-  console.clear();
+  clearScreen();
 
   // render loop
   while (true) {

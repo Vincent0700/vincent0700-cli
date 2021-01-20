@@ -135,11 +135,21 @@ function logError(msg) {
   console.log(chalk.bgRedBright.whiteBright(' ERROR '), chalk.redBright(msg));
 }
 
+/**
+ * Clear screen & scroll back buffer
+ * @see https://gist.github.com/timneutkens/f2933558b8739bbf09104fb27c5c9664
+ */
+function clearScreen() {
+  process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
+  console.clear();
+}
+
 module.exports = {
   range,
   repeat,
   sleep,
   fetch,
   render,
-  logError
+  logError,
+  clearScreen
 };

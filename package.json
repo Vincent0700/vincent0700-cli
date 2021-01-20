@@ -1,6 +1,6 @@
 {
   "name": "vincent0700-cli",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": "vincent0700 (https://vincentstudio.info)",
   "email": "wang.yuanqiu007@gmail.com",
   "description": "everything about me",
@@ -14,9 +14,13 @@
   "bin": {
     "vincent0700": "./dist/index.js"
   },
+  "repository": {
+    "url": "git@github.com:Vincent0700/vincent0700-cli.git",
+    "type": "git"
+  },
   "scripts": {
     "build": "webpack --progress",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "lint": "eslint --fix ./src/**/*.js && prettier --write ./**/*.{md,json}"
   },
   "devDependencies": {
@@ -32,7 +36,6 @@
     "lint-staged": "^10.0.3",
     "pngjs": "^6.0.0",
     "prettier": "^1.19.1",
-    "raw-loader": "^4.0.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.14.0",
     "webpack-bundle-analyzer": "^4.3.0",
