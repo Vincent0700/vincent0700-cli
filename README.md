@@ -1,1 +1,19 @@
 # vincent0700-cli
+
+This is an experimental cli tool to show my profile. Welcome!
+
+## ▩ Usage
+
+> Tips: You must have NodeJs environment to run this command.
+
+```javascript
+$ npx vincent0700-cli
+```
+
+I have tested it successfully on my macOS terminal. If you're on Windows, perhaps you need to use [Windows Terminal](https://github.com/microsoft/terminal) instead of cmd.exe.
+
+It's just experimental and don't be too critical (ノへ￣、) If you can't use it, don't be worry. You can also find me through [Telegram](https://t.me/vincent0700) and [Gmail](mailto:wang.yuanqiu007@gmail.com).
+
+## ▩ Preview
+
+[![](./demo.gif)](https://asciinema.org/a/BiZMPXylayQIftIJeR1uXdxBe)
