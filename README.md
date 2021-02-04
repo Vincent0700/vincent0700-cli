@@ -8,7 +8,7 @@ This is an experimental cli tool to show my profile. Welcome!
 
 ## ▩ Usage
 
-> Tips: You must have NodeJs environment to run this command.
+> Tips: Your NodeJs version should be greater than v12 to run this command.
 
 ```javascript
 $ npx vincent0700-cli
