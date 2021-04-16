@@ -47,7 +47,7 @@ const PROFILE_ROWS = [
   EMPTY_ROW,
   cc(' «             SOCIAL LINKS             » '),
   EMPTY_ROW,
-  h1('     BLOG ') + r1(' https://vincentstudio.info     '),
+  h1('     BLOG ') + r1(' https://vincent0700.com        '),
   h2('   GITHUB ') + r2(' https://github.com/vincent0700 '),
   h1(' TELEGRAM ') + r1(' https://t.me/vincent0700       '),
   h2('     MAIL ') + r2(' wang.yuanqiu007@gmail.com      '),
